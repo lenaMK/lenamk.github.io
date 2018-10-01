@@ -153,6 +153,7 @@ a:hover, a:focus, a:active {
 .logo {
  padding-top: 2rem;
  max-height: 5rem; 
+ max-width: 10rem;
 }
 
 ul.dashed {
@@ -166,4 +167,17 @@ ul.dashed > li {
 ul.dashed > li:before {
   content: "-   ";
 
+}
+
+.im {
+  max-width:100%;
+  height:auto;
+}
+
+.portrait {
+  max-width: 40%;
+  float: right;
+  float: top;
+  margin: 1rem;
+  padding:1rem;
 }

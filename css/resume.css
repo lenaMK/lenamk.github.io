@@ -150,11 +150,6 @@ a:hover, a:focus, a:active {
   color: #51312f;
 }
 
-.logo {
- padding-top: 2rem;
- max-height: 5rem; 
- max-width: 10rem;
-}
 
 ul.dashed {
   list-style-type: none;

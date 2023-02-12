@@ -173,8 +173,6 @@ ul.dashed > li:before {
   max-width: 40%;
   float: right;
   float: top;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding-left:1rem;
-  padding-right:1rem;
+  margin: 1rem;
+  padding:1rem;
 }

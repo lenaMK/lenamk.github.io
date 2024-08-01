@@ -1,23 +1,29 @@
+body {
 
+}
 
 /*Nav*/
 nav {
-    background-color: black;
+    background-color: #333;
+
+    margin-bottom: 80px;
 }
 
 nav > ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: #333;
     position: fixed;
     top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
     width: 100%;
 }
 
 nav > ul > li {
   float: right;
+  padding: 10px;
 }
 
 
@@ -29,10 +35,10 @@ nav > ul > li > a {
   text-decoration: none;
 }
 
-nav > ul > li > a:hover:not(.active) {
+nav > ul > li > a:hover:not(.active-nav) {
   background-color: #111;
 }
 
 .active-nav {
-  background-color: #aa0404;
+    border-bottom: red 1px solid;
 }

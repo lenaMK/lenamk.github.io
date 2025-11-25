@@ -18,7 +18,7 @@ var artWidth, artHeight, artAscent, artDescent
 
 // Circle
 var circleRadius //somehow isn't the radius but the diameter...
-var overflow = 50
+var overflow
 
 function setup() { 
     
@@ -32,6 +32,7 @@ function setup() {
     artDescent = textDescent()
     artHeight = artAscent+artDescent
 
+    overflow = windowHeight/10
     circleRadius = (artWidth+overflow)
 
     setArt();
@@ -50,7 +51,7 @@ function setArt(){
 
 
 function mousePressed() {
-
+    /*
     var artCenterX = x + artWidth/2
     var artCenterY = y + artHeight/2
 
@@ -58,7 +59,12 @@ function mousePressed() {
     
     if (distance < overflow)
         window.open('./projets.html', '_parent');
-    
+    */
+
+
+    //for now, just click to redirect to projects page
+    window.location.href = "./projets.html";
+
 }
 
 function windowResized() {

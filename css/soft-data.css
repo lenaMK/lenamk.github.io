@@ -1,0 +1,37 @@
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+    width: 100%;
+}
+.desc {
+    position: relative;
+}
+.cartel-bas {
+    position: absolute;
+    bottom: 0;
+}
+
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+  .grid-container div {
+    max-width: 100%;
+  }
+  img {
+    max-height: 50vh;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+}

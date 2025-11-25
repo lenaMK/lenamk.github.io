@@ -1,0 +1,33 @@
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  background-color: #333;
+  padding: 10px;
+  flex: 30%;
+}
+
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .flex-item {
+    flex: 100%;
+  }
+}
+
+
+
+
+/*images */
+.portrait {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

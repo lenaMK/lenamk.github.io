@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/styles.css" type="text/css"/> 
+    </head>
+    <body>
+        <script type="text/javascript">
+            fetch('../nav.html')
+            .then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("nav")
+                node.innerHTML += text
+            })
+        </script>
+        <div id="nav"></div>
+        <h1>Gertraud & the machines</h1>
+    </body>
+</html>

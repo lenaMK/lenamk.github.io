@@ -1,0 +1,60 @@
+#grid {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  margin: none;
+  padding: none;
+  gap: 10px;
+}
+.grid-container div{
+    margin: none;
+    padding: none;
+}
+.grid-container figure {
+    position: relative;
+    left: -40px;
+    width: 100%;
+    margin: none;
+    padding: none;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+  .grid-container div {
+    max-width: 100%;
+  }
+  
+}
+
+@media (min-width: 1300px) {
+  #grid {
+    max-width: 1300px;
+  }
+}
+
+/*images*/
+.fl-thumbnail{
+    width:100%;
+}
+
+
+figure figcaption{
+    visibility: hidden;
+    text-align: center;
+    font-style: italic;
+    
+}
+
+
+figure:hover figcaption{
+    color:white;
+    visibility: visible;
+    background-color: black;
+    display:block;
+}

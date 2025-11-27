@@ -9,6 +9,7 @@
             .then(text => {
                 var node = document.getElementById("nav")
                 node.innerHTML += text
+                var current = document.getElementById("nav-phd").setAttribute("class", "active-nav")
             })
         </script>
         <div id="nav"></div>

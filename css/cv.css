@@ -1,33 +1,86 @@
-
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
+.cv-section{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 900px;
+  padding-bottom: 3vh;
+  background-color: antiquewhite;
+  padding: 20px ;
+  margin-bottom: 20px;
 }
 
-.flex-item {
-  background-color: #333;
-  padding: 10px;
-  flex: 30%;
+.grid-70-30-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  margin-bottom: 10px;
 }
+
+.grid-70-30-container > div + div {
+  text-align: right;
+}
+
+.grid-40-60-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-bottom: 10px;
+}
+
 
 
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .flex-item {
-    flex: 100%;
+@media (max-width: 1400px) {
+  #vertical-nav{
+    display: none;
   }
+}
+@media (max-width: 800px) {
+  .logo{
+    display: none;
+  }
+}
+
+#vertical-nav {
+  position: fixed;
+  left: calc(((100vw - 1100px) / 2 ) - 160px);
+  top: calc(100vh / 5);
+  border-right: 1px solid black;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#vertical-nav > ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+
+#vertical-nav > ul > li {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#vertical-nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+#vertical-nav > ul > li > a:hover {
+  font-weight: bold;
+  color: black;
 }
 
 
 
+.logo {  
+  max-width: 180px;
+}
 
-/*images */
-.portrait {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.im{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
 }
 
 

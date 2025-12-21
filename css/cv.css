@@ -1,12 +1,35 @@
+h1 {
+  margin: none;
+  padding: none;
+}
+.cv-title{
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  margin-top: 180px;
+  margin-bottom: 80px;
+  color:black;
+  background-color: white;
+  border-radius: 150px;
+}
+
 .cv-section{
   display: block;
   margin-right: auto;
   margin-left: auto;
   max-width: 900px;
   padding-bottom: 3vh;
-  background-color: antiquewhite;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
   padding: 20px ;
   margin-bottom: 20px;
+
+  scroll-margin-top: 100px;
 }
 
 .grid-70-30-container {
@@ -60,9 +83,9 @@
 
 #vertical-nav {
   position: fixed;
-  left: calc(((100vw - 1100px) / 2 ) - 160px);
-  top: calc(100vh / 5);
-  border-right: 1px solid black;
+  left: calc(((100vw - 1100px) / 2 ) - 220px);
+  top: calc(100vh / 3.5);
+  border-right: 1px solid white;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -80,13 +103,14 @@
 }
 
 #vertical-nav > ul > li > a {
+  font-size: larger;
+  color: white;
   text-decoration: none;
-  color: black;
 }
 
 #vertical-nav > ul > li > a:hover {
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 

@@ -11,7 +11,7 @@
 
 // Art position
 var x, y
-var art = "Projets"
+var art = "Art is here."
 var fontsize = 35
 var font = 'BagnardRegular'
 var artWidth, artHeight, artAscent, artDescent
@@ -23,6 +23,7 @@ var overflow
 function setup() { 
     
     createCanvas(windowWidth, windowHeight); 
+    colorMode(HSB)
   
     textSize(fontsize); 
     textFont(font) 
@@ -63,7 +64,7 @@ function mousePressed() {
 
 
     //for now, just click to redirect to projects page
-    window.location.href = "./projets.html";
+    window.location.href = "./bio.html";
 
 }
 
@@ -75,9 +76,13 @@ function windowResized() {
 function draw() { 
      
     background(0o0); 
+    fill(0, 0, 100)
+    text("Where is art?", windowWidth/2 - textWidth("Where is art?")/2, y/3)
+
 
     circle(mouseX, mouseY, circleRadius); 
    
+    fill(0, 0, 0)
     text(art, x, y); 
 
 } 

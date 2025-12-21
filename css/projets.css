@@ -1,19 +1,42 @@
+body {
+  background-color: black;
+}
+
+.title{
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  margin-top: 180px;
+  margin-bottom: 80px;
+  color:black;
+  background-color: white;
+  border-radius: 150px;
+}
+
+
 #grid {
+
+    margin-top: 80px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     z-index: 0;
-    max-width: 1300px;
+    max-width: 1100px;
+    text-decoration: none;
 }
 .grid-container {
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
   margin: none;
   padding: none;
-  gap: 10px;
+  gap: 20px;
 }
 .grid-container div{
-    margin: none;
+    margin: 10px;
     padding: none;
 }
 .grid-container figure {
@@ -33,7 +56,10 @@
   }
   
 }
+a {
 
+  text-decoration: none;
+}
 
 /*images*/
 .fl-thumbnail{
@@ -42,16 +68,19 @@
 
 
 figure figcaption{
-    visibility: hidden;
-    text-align: center;
-    font-style: italic;
+  margin-top: 20px ;
+  padding: 20px;
+  margin-bottom: 20px;
+  color:white;
+  text-align: center;
+  font-style: italic;
     
 }
 
 
 figure:hover figcaption{
-    color:white;
-    visibility: visible;
     background-color: black;
+    border-bottom: white solid 3px;
     display:block;
+    
 }

@@ -12,19 +12,20 @@
 // Art position
 var x, y
 var art = "Art is here."
-var fontsize = 35
+var fontsize = 32
 var font = 'BagnardRegular'
 var artWidth, artHeight, artAscent, artDescent
+var skip = " → lenamk.site"
 
 // Circle
 var circleRadius //somehow isn't the radius but the diameter...
-var overflow
+var overflow = 20
 
 function setup() { 
     
     createCanvas(windowWidth, windowHeight); 
     colorMode(HSB)
-  
+    textAlign(CENTER)
     textSize(fontsize); 
     textFont(font) 
 
@@ -35,7 +36,7 @@ function setup() {
 
     overflow = windowHeight/10
     circleRadius = (artWidth+overflow)
-
+    
     setArt();
 
     noCursor(); 
@@ -52,19 +53,18 @@ function setArt(){
 
 
 function mousePressed() {
-    /*
+    
     var artCenterX = x + artWidth/2
     var artCenterY = y + artHeight/2
 
     var distance = dist(mouseX, mouseY, artCenterX, artCenterY)
     
-    if (distance < overflow)
-        window.open('./projets.html', '_parent');
-    */
+    if (distance > overflow)
+        window.open('./bio.html', '_parent');
+    else 
+        setArt()
+    
 
-
-    //for now, just click to redirect to projects page
-    window.location.href = "./bio.html";
 
 }
 
@@ -74,16 +74,24 @@ function windowResized() {
 }
 
 function draw() { 
-     
+    
     background(0o0); 
     fill(0, 0, 100)
-    text("Where is art?", windowWidth/2 - textWidth("Where is art?")/2, y/3)
+    textSize(42);
+    text("Where is art?", windowWidth/2, windowHeight/4)
 
+    
 
     circle(mouseX, mouseY, circleRadius); 
    
     fill(0, 0, 0)
+    textSize(fontsize)
     text(art, x, y); 
+
+    fill(0, 0, 100)
+    textSize(14); 
+    text("Click anywhere to skip", windowWidth/2, windowHeight * 4 / 5 - 50  )
+    text(skip, windowWidth/2, windowHeight * 4 / 5 )
 
 } 
 

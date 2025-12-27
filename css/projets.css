@@ -45,6 +45,11 @@ body {
     width: 100%;
     margin: none;
     padding: none;
+    
+}
+
+img {
+  border-radius: 25px;
 }
 
 @media (max-width: 600px) {

@@ -61,12 +61,24 @@ nav > ul > li {
   }
 }
 
+a {
+  color: #DD2C99
+}
+
+a:visited {
+  color: #DD2C99
+}
+
 nav > ul > li > a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+nav > ul > li > a:visited {
+  color: white;
 }
 
 

@@ -84,7 +84,7 @@ h1 {
 #vertical-nav {
   position: fixed;
   left: calc(((100vw - 1100px) / 2 ) - 220px);
-  top: calc(100vh / 3.5);
+  top: calc(100vh / 4);
   border-right: 1px solid white;
   padding-right: 20px;
   padding-top: 10px;

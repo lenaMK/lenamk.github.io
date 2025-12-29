@@ -30,6 +30,11 @@
                 node.innerHTML += text
                 var current = document.getElementById("nav-cv").setAttribute("class", "active-nav")
             })
+            fetch('footer.html').then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("footer")
+                node.innerHTML += text
+            })
   </script>
   <div id="nav"></div>
 
@@ -1119,16 +1124,7 @@
       <p>Dernière mise à jour en décembre 2025.</p>
     </div>
   </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
+  <div id="footer"></div>
 
 </body>
 

@@ -12,6 +12,12 @@
                 node.innerHTML += text
                 var current = document.getElementById("nav-phd").setAttribute("class", "active-nav")
             })
+
+            fetch('footer.html').then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("footer")
+                node.innerHTML += text
+            })
         </script>
         <div id="nav"></div>
         <h1 class="title">PhD</h1>
@@ -106,5 +112,6 @@
             </ul></p>
         </section>
         <div class="maj">Dernière mise à jour en décembre 2025.</div>
+        <div id="footer"></div>
     </body>
 </html>

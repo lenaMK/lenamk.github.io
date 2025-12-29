@@ -11,6 +11,11 @@
                 var node = document.getElementById("nav")
                 node.innerHTML += text
                 var current = document.getElementById("nav-bio").setAttribute("class", "active-nav")
+              fetch('footer.html').then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("footer")
+                node.innerHTML += text
+            })
             })
         </script>
         <div id="nav"></div>
@@ -24,7 +29,7 @@
             
               <div>
                 <p>Je suis candidate au doctorat en histoire de l’art et en informatique à l’Université de Montréal. Je me spécialise dans la structuration et la valorisation de données culturelles, notamment par la visualisation de données et la cartographie. Dans le cadre de ma recherche-création doctorale, j’expérimente avec la matérialisation de données culturelles comme nouvelle forme d’accès aux collections. À la croisée de la textilité et de l’algorithmique, mon travail donne une forme tangible aux données culturelles pour offrir de nouvelles approches des collections.</p>
-                <p>Également fondatrice et directrice technique de l’organisme culturel Maison MONA, j’œuvre au quotidien à rendre l’art, et les données, plus accessibles pour tou·te·s. </p>
+                <p>Également fondatrice et directrice technique de l’organisme culturel <a href="https://monamontreal.org/" target="_blank">Maison MONA</a>, j’œuvre au quotidien à rendre l’art, et les données, plus accessibles pour tou·te·s. </p>
                 
               </div>
           
@@ -41,7 +46,8 @@
         
       <div class="maj">Dernière mise à jour en décembre 2025</div>  
 
-        </div>
+      </div>
+      <div id="footer"></div>
         
     
     </body>

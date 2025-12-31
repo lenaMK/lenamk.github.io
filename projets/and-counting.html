@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css/styles.css" type="text/css"/> 
-        <link rel="stylesheet" href="../css/projets.css" type="text/css"/> 
+        <link rel="stylesheet" href="../css/page-projet.css" type="text/css"/> 
     </head>
     <body>
         <script type="text/javascript">
@@ -11,15 +11,64 @@
                 var node = document.getElementById("nav")
                 node.innerHTML += text
             })
+
+            fetch('../footer.html').then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("footer")
+                node.innerHTML += text
+            })
+            
         </script>
         <div id="nav"></div>
-        <div id="grid">
+
+        <div id="vertical-nav">
+            <h2>Strates</h2>
+            <ul>
+                <li><a href="#projet" class="active">Projet</a></li>
+                <li><a href="#data">Données</a></li>
+                <li><a href="#code ">Code</a></li>
+                <li><a href="#matiere">Objet</a></li>
+                <li><a href="#participation">Participation</a></li>
+                <li><a href="#doc">Documentation</a></li>
+            </ul>
+        </div>
+
+        <div class="title">
 
             <h1><i>[...] and Counting</i></h1>
             <p>2024</p>
-
-            <p>Installation participative autour d'une carte au sujet de l’entrée des femme·x·s artistes dans l’espace public à Tiohtià:ke · Montréal</p>
             
         </div>
+        
+
+        <div class="active strate" id="projet">
+
+            <h2>Description</h2>
+
+        </div>
+
+        <div id="data" class="strate">
+
+        </div>
+
+        <div id="code" class="strate">
+
+        </div>
+
+        <div id="matiere" class="strate">
+
+        </div>
+
+        <div id="participation" class="strate">
+
+        </div>
+
+        <div id="doc" class="strate">
+
+        </div>
+
+        <div class="maj">Dernière mise à jour en décembre 2025.</div>
+        <div id="footer"></div>
+
     </body>
 </html>

@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/styles.css" type="text/css"/> 
+        <link rel="stylesheet" href="../css/page-projet.css" type="text/css"/> 
+    </head>
+    <body>
+        <script type="text/javascript">
+            fetch('../nav.html')
+            .then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("nav")
+                node.innerHTML += text
+            })
+            fetch('footer.html').then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("footer")
+                node.innerHTML += text
+            })
+        </script>
+        <div id="nav"></div>
+
+        <div id="vertical-nav">
+            <h2>Strates</h2>
+            <ul>
+                <li><a href="#projet" class="active">Projet</a></li>
+                <li><a href="#data">Données</a></li>
+                <li><a href="#code ">Code</a></li>
+                <li><a href="#matiere">Objet</a></li>
+                <li><a href="#participation">Participation</a></li>
+                <li><a href="#doc">Documentation</a></li>
+            
+            </ul>
+        </div>
+
+        <div class="title">
+
+            <h1><i>[...] and Counting</i></h1>
+            <p>2024</p>
+            
+        </div>
+        
+
+        <div class="active" id="projet">
+
+        </div>
+
+        <div id="data">
+
+        </div>
+
+        <div id="code">
+
+        </div>
+
+        <div id="matiere">
+
+        </div>
+
+        <div id="participation">
+
+        </div>
+
+        <div id="doc">
+
+        </div>
+
+        <div class="maj">Dernière mise à jour en décembre 2025.</div>
+        <div id="footer"></div>
+
+    </body>
+</html>

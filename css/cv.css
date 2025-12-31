@@ -2,6 +2,7 @@ h1 {
   margin: none;
   padding: none;
 }
+
 .cv-title{
   display: grid;
   place-items: center;

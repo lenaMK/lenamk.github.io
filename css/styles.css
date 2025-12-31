@@ -73,10 +73,7 @@ nav > ul > li > a:visited {
 }
 
 
-
 #footer-nav {
-    bottom: 0;
-    right: 0;
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     list-style-type: none;

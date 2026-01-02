@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
     <head>
         <link rel="stylesheet" href="../css/styles.css" type="text/css"/> 
         <link rel="stylesheet" href="../css/page-projet.css" type="text/css"/> 
@@ -16,20 +16,34 @@
             .then(text => {
                 var node = document.getElementById("footer")
                 node.innerHTML += text
+
             })
-            
+            function activate(el){
+                document.getElementsByClassName("nav-active")[0].classList.remove("nav-active")
+                document.getElementById(el).setAttribute("class", "nav-active")
+
+
+                var strate = el.substring(4, el.length)
+                console.log(strate)
+                //remove previous active section
+                document.getElementsByClassName("active")[0].classList.remove("active")
+
+
+                document.getElementById(strate).classList.add("active")
+                
+            }
         </script>
         <div id="nav"></div>
 
         <div id="vertical-nav">
             <h2>Strates</h2>
             <ul>
-                <li><a href="#projet" class="active">Projet</a></li>
-                <li><a href="#data">Données</a></li>
-                <li><a href="#code ">Code</a></li>
-                <li><a href="#matiere">Objet</a></li>
-                <li><a href="#participation">Participation</a></li>
-                <li><a href="#doc">Documentation</a></li>
+                <li><a href="#projet" id="nav-projet" class="nav-active" onclick="activate(id)">Projet</a></li>
+                <li><a href="#data" id="nav-data" onclick="activate(id)">Données</a></li>
+                <li><a href="#code" id="nav-code" onclick="activate(id)">Code</a></li>
+                <li><a href="#matiere" id="nav-matiere" onclick="activate(id)">Objet</a></li>
+                <li><a href="#participation" id="nav-participation" onclick="activate(id)">Participation</a></li>
+                <li><a href="#doc" id="nav-doc" onclick="activate(id)">Documentation</a></li>
             </ul>
         </div>
 
@@ -41,30 +55,45 @@
         </div>
         
 
-        <div class="active strate" id="projet">
+        <div id="projet" class="strate active">
 
             <h2>Description</h2>
 
         </div>
 
         <div id="data" class="strate">
+            <h2>Données</h2>
+
+            <script>
+                fetch('https://raw.githubusercontent.com/lenaMK/and-counting/refs/heads/main/data/femx.json').then(response => response.text())
+                .then(text => {
+                var node = document.getElementById("data-area")
+                node.append(JSON.stringify(text, null, 4).text())
+            })
+            </script>
+
+            <p id="data-area" class="code-style"></p>
 
         </div>
 
         <div id="code" class="strate">
-
+            <h2>Code</h2>
         </div>
 
         <div id="matiere" class="strate">
-
+            <h2>Matière</h2>
         </div>
 
         <div id="participation" class="strate">
-
+            <h2>Participation</h2>
         </div>
 
         <div id="doc" class="strate">
+            <h2>Documentation</h2>
+        </div>
 
+        <div class="strate visible">
+            <p>Comment citer: </p>
         </div>
 
         <div class="maj">Dernière mise à jour en décembre 2025.</div>

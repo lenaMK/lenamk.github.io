@@ -7,7 +7,6 @@ body{
 
 
 nav {
-    
     overflow-y: visible;
     background-color: #000000;
     margin-bottom: 80px;
@@ -15,7 +14,7 @@ nav {
 }
 
 nav > ul {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -23,10 +22,7 @@ nav > ul {
     overflow-y: visible;
     list-style-type: none;
     overflow: hidden;
-    background-color:  #000000;
-    position: fixed;
-    top: 0;
-    left: 0;
+    
     margin: 0;
     padding: 0;
     width: 100%;
@@ -90,13 +86,15 @@ nav > ul > li > a:visited {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 930px) {
   nav {
-    font-size: medium;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 32pt;
   }
   #footer-nav {
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

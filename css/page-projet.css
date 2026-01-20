@@ -1,9 +1,9 @@
-h1 {
-  margin: none;
-  padding: none;
+body{
+    min-height: 100vh;
 }
 
-.cv-title{
+
+.title{
   display: grid;
   place-items: center;
   margin-left: auto;
@@ -18,8 +18,10 @@ h1 {
   border-radius: 150px;
 }
 
-.cv-section{
-  display: block;
+
+.strate {
+  
+  display: none;
   margin-right: auto;
   margin-left: auto;
   max-width: 900px;
@@ -30,67 +32,37 @@ h1 {
   padding: 20px ;
   margin-bottom: 20px;
 
-  scroll-margin-top: 100px;
+  scroll-margin-top: 50vh;
 }
 
-.grid-70-30-container {
-  display: grid;
-  grid-template-columns: 75% 25%;
-  margin-bottom: 10px;
+.active {
+  display: block
 }
 
-.grid-70-30-container > div + div {
-  text-align: right;
-}
-
-#formation > .grid-70-30-container {
-  padding-bottom: 20px;
-  border-bottom: 1px grey solid;
-}
-
-#formation > .grid-70-30-container:last-of-type {
-  padding-bottom: none;
-  border-bottom: none;
-}
-
-.grid-40-60-container {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: larger;
-  padding-top: 50px;
-  
-}
-
-.accent-line {
-  border-top: 1pt grey solid;
+.visible {
+  display: block;
+  background-color: black;
+  color: white;
 }
 
 
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media (max-width: 1400px) {
   #vertical-nav{
     display: none;
   }
 }
-@media (max-width: 800px) {
-  .logo{
-    display: none;
-  }
-}
+
 
 #vertical-nav {
   position: fixed;
   left: calc(((100vw - 1100px) / 2 ) - 220px);
-  top: calc(100vh / 4);
+  top: calc(100vh / 2.5);
   border-right: 1px solid white;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 
 #vertical-nav > ul {
   list-style-type: none;
@@ -114,17 +86,23 @@ h1 {
   color: white;
 }
 
-
-
-.logo {  
-  max-width: 180px;
+.nav-active{
+  background-color: white;
+  font-weight: bold;
+  color: black;
+  border-radius: 150px;
+  width: 580px;
+  overflow: hidden;
 }
 
-.im{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80%;
+/*doesn't work for now*/
+.nav-active #vertical-nav > ul > li > a:hover {
+  color: black
 }
 
-
+.code-style{
+  width: 100%;
+  height: 800px;
+  white-space: pre;
+  font-family: monospace;
+}

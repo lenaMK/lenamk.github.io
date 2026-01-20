@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="../css/styles.css" type="text/css"/> 
+        <link rel="stylesheet" href="../css/page-projet.css" type="text/css"/> 
+    </head>
+    <body>
+        <script type="text/javascript">
+            fetch('../nav.html')
+            .then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("nav")
+                node.innerHTML += text
+            })
+            fetch('footer.html').then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("footer")
+                node.innerHTML += text
+            })
+
+            function activate(el){
+                //document.getElementById(el).setAttribute("class", "active")
+                var strate = el.substring(4, el.length)
+                console.log(strate)
+                //remove previous active section
+                document.getElementsByClassName("active")[0].classList.remove("active")
+
+
+                document.getElementById(strate).classList.add("active")
+                
+        </script>
+        <div id="nav"></div>
+
+         <div id="vertical-nav">
+            <h2>Strates</h2>
+            <ul>
+                <li><a href="#projet" id="nav-projet" onclick="activate(id)">Projet</a></li>
+                <li><a href="#data" id="nav-data" onclick="activate(id)">Données</a></li>
+                <li><a href="#code" id="nav-code" onclick="activate(id)">Code</a></li>
+                <li><a href="#matiere" id="nav-matiere" onclick="activate(id)">Objet</a></li>
+                <li><a href="#participation" id="nav-participation" onclick="activate()">Participation</a></li>
+                <li><a href="#doc" id="nav-doc" onclick="activate(id)">Documentation</a></li>
+            </ul>
+        </div>
+
+        <div class="title" >
+
+            <h1><i>[...] and Counting</i></h1>
+            <p>2024</p>
+            
+        </div>
+        
+
+        <div class="active strate" id="projet">
+
+        </div>
+
+        <div id="data" class="strate">
+
+        </div>
+
+        <div id="code" class="strate">
+
+        </div>
+
+        <div id="matiere" class="strate">
+
+        </div>
+
+        <div id="participation" class="strate">
+
+        </div>
+
+        <div id="doc" class="strate">
+
+        </div>
+
+        <div class="maj">Dernière mise à jour en décembre 2025.</div>
+        <div id="footer"></div>
+
+    </body>
+</html>

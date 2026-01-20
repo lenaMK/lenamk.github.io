@@ -1,0 +1,62 @@
+<!DOCTYPE html><html>
+    <head>
+        <link rel="stylesheet" href="./css/styles.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/bio.css" type="text/css"/>
+    </head>
+    <body>
+        <script type="text/javascript">
+            fetch('nav.html')
+            .then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("nav")
+                node.innerHTML += text
+                var current = document.getElementById("nav-bio").setAttribute("class", "active-nav")
+              fetch('footer.html').then(response => response.text())
+            .then(text => {
+                var node = document.getElementById("footer")
+                node.innerHTML += text
+            })
+            })
+        </script>
+        <div id="nav"></div>
+
+        <div id="grid">
+
+          <img src="img/TBM_02.jpeg" alt="Lena MK dans l'installation en cours d'installation intitulée Célébration de données molles. Lena est accroupie sous un cerceau suspendu au plafond d'où tombent des guirlandes de pompons colorées" class="portrait-bulle">
+
+          <section>
+            
+            
+              <div>
+                <p>Je suis candidate au doctorat en histoire de l’art et en informatique à l’Université de Montréal. Je me spécialise dans la structuration et la valorisation de données culturelles, notamment par la visualisation de données et la cartographie. Dans le cadre de ma recherche-création doctorale, j’expérimente avec la matérialisation de données culturelles comme nouvelle forme d’accès aux collections. À la croisée de la textilité et de l’algorithmique, mon travail donne une forme tangible aux données culturelles pour offrir de nouvelles approches des collections.</p>
+                <p>Également fondatrice et directrice technique de l’organisme culturel <a href="https://monamontreal.org/" target="_blank">Maison MONA</a>, j’œuvre au quotidien à rendre l’art, et les données, plus accessibles pour tou·te·s. </p>
+                
+              </div>
+          
+          </section>
+
+          <section>
+            <p>
+              J’utilise comme nom d'usage Lena MK. C'est un acronyme composé de mes noms de famille, Miyazaki et Krause, que j'ai officiellement adopté en 2025. Mon identifiant <a href="https://orcid.org/0000-0001-6280-6657" target="_blank">ORCID</a> permet de faire le lien avec mes publications préalables. La prononciation de mon prénom varie même au sein de mon entourage proche et elles me conviennent toutes.</p>
+            <p>Mes pronoms sont « elle » ou « iel » et j'utilise les accords féminins tout en préférant les expressions non-genrée.</p>
+            
+          </section>
+
+
+        
+      <div class="maj">Dernière mise à jour en décembre 2025</div>  
+
+      </div>
+      <div id="footer"></div>
+        
+    
+    </body>
+</html>
+
+<!--
+
+for re-using bits of code such as nav
+- https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
+
+
+-->
